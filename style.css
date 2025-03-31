@@ -1,20 +1,12 @@
-body {
-    font-family: "Poppins", sans-serif;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 50px;
-    background-image: url('img/sidney.jpeg');
-    background-size: 1000%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  body {
+    padding   : 0;
+    margin    : 0;
+    color     : #ffffff;
+    /* display: flex; */
+    font-family     : "Poppins", sans-serif;
   }
 
-  body::before {
-    filter: blur(5px) brightness(50%);
-  }
-  
-  h1 {
+  h2 {
     font-weight: 700; /* Bold */
   }
   
@@ -22,32 +14,78 @@ body {
     font-weight: 400; /* Regular */
   }
 
+  .fundo {
+    display         : flex;
+    padding-top     : 3rem;
+    padding-bottom  : 3rem;
+    min-height      : 100vh;
+    justify-content : center;
+    text-align      : center;
+    background-image: url('img/sidney.jpeg');
+    background-size : cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: scroll;
+  }
+
+  .fundo::before {
+    content: "";
+    z-index: -1;
+    position: inherit;
+    left: inherit;
+    top: inherit;
+    width: inherit;
+    height: inherit;
+    background-image: inherit;
+    background-size: contain;
+    background-position: 50%;
+    filter: blur(100px);
+    transform: scale(2);
+    will-change: filter;
+  }
+
   .conteudo {
     background-color: black;
     display: grid;
     justify-content: center;
-    border-radius: 2rem;
-    width: 30rem;
-    padding: 5rem 0 ;
+    border-radius: 1.5rem;
+    width: 45rem;
+    padding: 2.5rem 0 ;
   }
 
-  
-
   .perfil {
-    height: 30rem;
-    max-width: 20rem;
-    background-image: url('img/sidney.jpeg');
-    background-position: center 10%;
-    background-size:auto;
+    height: 25rem;
+    width: 25rem;
+    background-image: url(img/sidney.jpeg);
+    background-position-y: -67px;
+    background-position-x: center;
+    background-size: 114%;
     background-repeat: no-repeat;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     margin-bottom: 5rem;
+    align-content: end;
+  }
+
+  .perfil > div {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+  }
+
+  .icones {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content : center;
+    text-align      : center;
+    align-items     : center;
   }
 
   .acao {
     min-height: 30rem;
     width: 20rem;
 
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     margin-bottom: 5rem;
   }
